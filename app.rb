@@ -4,5 +4,5 @@ require "sinatra/activerecord"
 require_relative 'app/models'
 
 get '/' do
-  'This is not the route you are looking for'
+  erb :index, :locals => { :content => Content.all }
 end
